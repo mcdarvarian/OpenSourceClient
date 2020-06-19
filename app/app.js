@@ -25,31 +25,30 @@ let todoArray = {
 function page1Submit() {
   todoArray = {
     name:  document.getElementById('name').value,
-    sport: '',
-    team: '',
-    gender: '',
-    married: false
+    sport: todoArray.sport,
+    team: todoArray.team,
+    gender: todoArray.gender,
+    married: todoArray.married
   };
   console.log(todoArray);
 }
-function page2Submit(values) {
+function page2Submit() {
   todoArray = {
     name: todoArray.name,
     sport: document.getElementById('sport').value,
     team: document.getElementById('team').value,
-    gender: '',
-    married: false
+    gender: todoArray.gender,
+    married: todoArray.married
   };
   console.log(todoArray);
 }
-function page3Submit(values) {
-  console.log(document.getElementById('todoForm').value)
+function page3Submit() {
   todoArray = {
     name: todoArray.name,
     sport: todoArray.sport,
     team: todoArray.team,
     gender: document.getElementById('gender').value,
-    married: document.getElementsByName('marriage').value
+    married: document.getElementsByName('marriage')[0].checked
   };
   console.log('todo is', todoArray);
 }
