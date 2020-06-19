@@ -1,6 +1,15 @@
-<p>This is the partial for view 3.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<h3>3 of 3</h3>
+<form id="todoForm" (ngSubmit)="todoSubmit(todoForm.value)" ngForm>
+    <input id='gender' type="text" class="form-control" placeholder="Your Gender" name="gender" ngModel>
+
+    <input type="radio" id="married" name="marriage" value="true">
+    <label for="married">Married</label><br>
+    <input type="radio" id="not-married" name="marriage" value="false" checked>
+    <label for="not-married">Not Married</label><br>
+        <input type="submit" value="Submit">
+        <!--so Im having issue with having it submit AND change without errors, it goes to the next view before submitting
+        so Im having it go slower in order to get it right rather than have it be smooth-->
+  </form>
+<span onclick="check()">TEST</span>
 <a href="#!/view2">Back</a>
+

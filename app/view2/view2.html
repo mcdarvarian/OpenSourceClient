@@ -1,7 +1,10 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<h3>2 of 3</h3>
+<form #todoForm (ngSubmit)="todoSubmit(todoForm.value)" ngForm>
+  <input id='sport' type="text" class="form-control" placeholder="Your Sport" name="sport" ngModel>
+  <input id='team' type="text" class="form-control" placeholder="Your Team" name="team" ngModel>
+      <span class="input-group-text" onclick="page2Submit({sport:(sport).value, team:(team).value})">Add</span>
+      <!--so Im having issue with having it submit AND change without errors, it goes to the next view before submitting
+      so Im having it go slower in order to get it right rather than have it be smooth-->
+</form>
 <a href="#!/view1">Back</a>
 <a href="#!/view3">Next</a>

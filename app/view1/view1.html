@@ -1,2 +1,10 @@
-<p>This is the partial for view 1.</p>
-<a href="#!/view2">Next</a>
+<h3>Page 1</h3>
+<form #todoForm (ngSubmit)="todoSubmit(todoForm.value)" ngForm>
+    <input id='name' type="text" class="form-control" placeholder="Your Name" name="todo" ngModel>
+    
+        <span class="input-group-text" onclick="page1Submit(/*{name:(todo).value}*/)">Add</span>
+        <!--so Im having issue with having it submit AND change without errors, it goes to the next view before submitting
+        so Im having it go slower in order to get it right rather than have it be smooth-->
+        <a href="#!/view2">Next</a>
+
+</form>
